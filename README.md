@@ -1,1 +1,9 @@
 # team_stuyscrapers
+
+Our site will depict some, if not most, of the tallest skyscrapers throughout US history. There are three views: height, material, and usage. They can be toggled/selected by the click of a button.
+
+The general composition of each view is as follows. There will be a map of the United States with a timeline slider at the bottom of the map that goes from 1880 up to 2016. The map will contain points at various locations/cities, each corresponding to a skyscraper built and standing in the United States by the time period selected by the user (using the slider). Thus, if a user selects year X, the map will contain points representing skyscrapers that were either built in or before year X. If the skyscraper was demolished by that year, its corresponding point will disappear.
+
+Specifics for each view: In the height view, there will be three types of points (they will be differentiated by a color gradient), representing three types of height ranges. These height ranges are: >400m, >100m, and <= 100 (or possibly >50m). Additionally, the user also has the option to hover over a point to display a small box containing the name of the skyscraper and its exact height. In the material view, there will again by three types of points, representing the type of material used to build the skyscraper. The possible materials include steel, concrete, and composite. Finally, in the usage view, there will be four types of points, representing what each skyscraper is used for. These usages include office, residential, telecommunications, and other.
+
+We picked this set of data to display and visualize because we thought it would be interesting to see when the large-scale development of skyscrapers truly occured, where they were mostly built, and for what purpose they were built. With the addition of the timeline slider, perhaps we will be able to correlate why certain skyscrapers were built during different times throughout America's history.
