@@ -1,0 +1,18 @@
+h1 {
+  font-weight: 300;
+}
+
+.rangeslider,
+input[type='range'] {
+  max-width: 400px;
+}
+
+.rangeslider__handle {
+  border-radius: 22px;
+  min-width: 62px;
+  line-height: 42px;
+  text-align: center;
+  &:after {
+    background: 0;
+  }
+}
