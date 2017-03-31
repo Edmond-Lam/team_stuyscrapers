@@ -5,9 +5,18 @@ def open():
     reader = csv.DictReader(csvfile)
     return reader
 
+
+def getInfo():
+    reader = open()
+    for row in reader:
+        
+
+
+"""
 def getHeight():
     reader = open()
     for row in reader:
+        
 
 def getName():
     reader = open()
@@ -21,3 +30,4 @@ def getUsage():
     reader = open()
     for row in reader:
 
+"""
