@@ -1,0 +1,10 @@
+==========
+
+Team Stuyscraper's Devlog
+
+==========
+
+Edmond Lam - 4/1/17 3:21 PM
+
+Devlog created. Slider test almost completed, can display date when slider is changed in addition to the handle. Starting on CSS.
+
