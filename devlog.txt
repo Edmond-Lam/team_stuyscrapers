@@ -1,0 +1,14 @@
+==========
+
+Team Stuyscraper's Devlog
+
+==========
+
+Edmond Lam - 4/1/17 3:21 PM
+
+Devlog created. Slider test almost completed, can display date when slider is changed in addition to the handle. Starting on CSS.
+
+
+Constantine Athanitis - 4/3/17 2:10 AM
+
+Research the different map that can be created for the US. I have several examples that should work fine for our project...unfortunately however, nothing will disply unless running on a web server, so the flask app must be up and running first.

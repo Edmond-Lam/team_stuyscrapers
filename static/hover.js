@@ -2,20 +2,33 @@ var svg = document.getElementById("slate");
 
 var showInfo = function(){
     var x = this.getAttribute("cx");
-    var y = parseInt(this.getAttribute("cy")) - 30;
+    var y = parseInt(this.getAttribute("cy")) - 50;
+    var info = document.createElementNS("http://www.w3.org/2000/svg", "g");
     var box = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    box.setAttribute("width", 50);
-    box.setAttribute("height", 30);
-    box.setAttribute("fill", "black");
-    box.setAttribute("id", "text");
+    box.setAttribute("width", 70);
+    box.setAttribute("height", 50);
+    box.setAttribute("fill", "white");
+    box.setAttribute("stroke", "black");
+    box.setAttribute("id", "box");
     box.setAttribute("x", x);
     box.setAttribute("y", y);
+    var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.setAttribute("x", x);
+    text.setAttribute("y", y + 25);
+    text.setAttribute("font-family", "Verdana");
+    text.setAttribute("font-size", "10");
+    text.innerHTML = "x: " + x + " ,y: " + y;
+    text.setAttribute("id", "text");
+    
     svg.appendChild(box);
+    svg.appendChild(text);
 };
 
 var removeInfo = function(){
     var text = document.getElementById("text");
     text.parentNode.removeChild(text);
+    var box = document.getElementById("box");
+    box.parentNode.removeChild(box);
 }
 
 var drawCircle = function(e){
