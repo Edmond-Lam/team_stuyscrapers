@@ -6,17 +6,17 @@
 
 
   <body>
-    <ul class="nav nav-pills left">
-      <li class="dropdown active span8">
-        <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown">
-          <i class="icon icon-envelope icon-white"></i>&nbsp;<span id="dropdown_title">Select</span><span class="caret"></span></a>
-        <ul ID="divNewNotifications" class="dropdown-menu">
-          <li><a>One</a></li> 
-	  <li><a>Two</a></li>       
-	  <li><a>Three</a></li>                         
-        </ul>
-      </li>
-    </ul>
+    <select id="view">
+      <option value="height">Height View</option>
+      <option value="materials">Materials View</option>
+      <option value="usage">Usage View</option>
+    
+
+
+    </select>
+    <br>
+    
+
 
     <svg width="960" height="600" fill="none" stroke="#000" stroke-linejoin="round" stroke-linecap="round"></svg>
     <script src="https://d3js.org/d3.v4.min.js"></script>
