@@ -1,5 +1,5 @@
 from flask import Flask, render_template, session, redirect, url_for, request
-from utils import accounts, initTables, docs, infohttps://github.com/Edmond-Lam/team_stuyscrapers.git
+##from utils import accounts, initTables, docs, info
 
 app = Flask(__name__)
 
