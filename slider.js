@@ -1,4 +1,5 @@
-var $element = $('input[type="range"]');
+
+var $element = $('#ranges');
 var $handle;
 var $text = $( "#text" )
 
@@ -8,7 +9,7 @@ $element
 	onInit: function() {
 	    $handle = $('.rangeslider__handle', this.$range);
 	    updateInfo($handle[0], this.value);
-	    updateInfo($text, this.value);
+	    updateInfo($text, $element.rangeslider.value + 1);
 	}
     })
     .on('input', function() {

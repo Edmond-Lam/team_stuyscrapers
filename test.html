@@ -7,14 +7,24 @@
     <link href="static/style.css" rel="stylesheet"/>
     <link href="static/rangeslider.css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="static/rangeslider.min.js"></script>
+    <script src="http://andreruffert.github.io/rangeslider.js/assets/rangeslider.js/dist/rangeslider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
   </head>
 
   <body>
     <h1>rangeslider test</h1>
-    <input type="range" min="1899" max="2016" step="1" value="300">
+    <input type="range" min="1899" max="2016" step="1" value="1899" id="ranges">
+    <div class="range">
+      <small class="min pull-left">Min</small>
+      <small class="max pull-right">Max</small>
+    </div>
+    <br>
+    <div class="slideRight text-center" id="text">
+      <big>
+	1899
+      </big>
+    </div>
     <script src="slider.js"></script>
-    <div id="text"></div>
   </body>
-
+  
 </html>

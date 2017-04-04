@@ -1,19 +1,41 @@
+
 h1 {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .rangeslider,
 input[type='range'] {
-  max-width: 700px;
+    max-width: 900px;
+}
+
+html,
+body {
+  color: #404040;
+  height: 100%;
+  width: 70%;
+  text-align: center;
+  margin: 8rem auto 0;
+}
+
+.min {
+    
+    padding-top: 5px;
+    padding-left: 10px;
+    color: #cccccc;
+}
+
+.max {
+    padding-top: 5px;
+    padding-right: 10px;
+    color: #cccccc;
 }
 
 .rangeslider__handle {
-  border-radius: 22px;
-  min-width: 62px;
-  line-height: 42px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  &:after {
-    background: 0;
-  }
+    border-radius: 22px;
+    min-width: 62px;
+    line-height: 42px;
+    text-align: center;
+    
+    background: none;
+    font-family: arial, sans-serif;
 }
