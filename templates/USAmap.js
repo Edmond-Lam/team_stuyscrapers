@@ -238,15 +238,15 @@ var getCoords = function(lat, lon){
 }
 
 
-/*var coord = getCoords(40.7, -74);
+var coord = getCoords(40.7, -74);
 var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 dot.setAttribute("id", "circle");
 dot.setAttribute("fill", "blue");
 dot.setAttribute("cx", coord[0]);
 dot.setAttribute("cy", coord[1]);
-<<<<<<< HEAD
+
 dot.setAttribute("r", 3);
-s.appendChild(dot);*/
+s.appendChild(dot);
 
 dot.setAttribute("r", 20);
 s.appendChild(dot);
