@@ -17,38 +17,20 @@ d3.json(us, function(error, us) {
     svg.append("path")
 	.attr("d", path(topojson.feature(us, us.objects.nation)));
 
-////////////////////////////////////////////////////////////////////////
-    //THIS CREATES A RANDOM CIRCLE...aka it works
-    /**
 
-    svg.append("circle")
-//	.data(places)
-//	.enter()
-
-	.attr("cy",200)
-	.attr("cx", 200)
-
-//	.attr("cy",function(d){return d[0]["location"]["latitude"];}) //latitude
-//	.attr("cx",function(d){return d[0]["location"]["longitude"];}) //longitude
-    
-	.attr("r", "50px")
-	.style("fill", "red");
-
-    ////////////////////////////////////////////////////////////////////
-
- **/
 
     d3.select("svg").selectAll("circle")
-	.data(places)
+	.data(displayPlacesData)
+	//.data(places) used for the trivial sample/test cases below
 	.enter()
 	.append("circle")
     	.attr("cy",function(d){
-	    return d["location"]["latitude"];
+	    return d["location"]["0"];
 	}) //latitude
     	.attr("cx",function(d){
-	    return d["location"]["longitude"];
+	    return d["location"]["1"];
 	}) //longitude
-	.attr("r", "50px")
+	.attr("r", "200px")
 	.style("fill", "red");
     
 });
@@ -78,6 +60,7 @@ var lat = [40,29]
 
 
 var viewButton = document.getElementById("view");
+
 //var viewButton = d3.select("select");
 //console.log(viewButton);
 
@@ -92,9 +75,9 @@ var getData = function(year){
 console.log(getData("1949"));
 
 
+
 var changeView = function(e){
-    //the console log codes are pseudo codes for the function
-    //we need to display the various views
+
     
     var tableHeading = document.getElementById("vHead");
     var c1 = document.getElementById("color1");
@@ -103,7 +86,8 @@ var changeView = function(e){
     var var3 = document.getElementById("var3");
     var c2 = document.getElementById("color2");
     var c3 = document.getElementById("color3");
-    
+
+    console.log(viewButton.value);
     
     if (viewButton.value == "height"){
 
@@ -162,10 +146,8 @@ viewButton.addEventListener("change", changeView);
 
 
 
-console.log("latitude: "+places[0]["location"]["latitude"]);
-console.log("longitude: "+places[0]["location"]["longitude"]);
 
-//PARSE TROUGH THE DICTIONARYYYYY
+var yearButton = document.getElementById("year");
 
 
 
@@ -177,13 +159,12 @@ console.log("longitude: "+places[0]["location"]["longitude"]);
 	.enter().append("circle", ".pin")
 	.attr("r", "3px")
 
-   // console.log(projection([d.location.longitude]));
-    /**   .attr("cx",function(d) {
-	  return "" + projection([
-          d.location.longitude])});
+//to simplify, we're only doing skyscrapers built the year of
 
-	  /**.attr("cx","500")//projection[d.location.longitude])
-          .attr("cy","500");//projection[d.location.latitude]);
+
+
+
+
 
 	  add circles to svg
 
@@ -235,6 +216,7 @@ console.log("longitude: "+places[0]["location"]["longitude"]);
 */
 
 
+
 var s = document.getElementById("slate");
 
 
@@ -262,9 +244,39 @@ dot.setAttribute("id", "circle");
 dot.setAttribute("fill", "blue");
 dot.setAttribute("cx", coord[0]);
 dot.setAttribute("cy", coord[1]);
+<<<<<<< HEAD
 dot.setAttribute("r", 3);
 s.appendChild(dot);*/
 
+dot.setAttribute("r", 20);
+s.appendChild(dot);
 
 
 
+
+//1949, 1942, 1943,1940
+
+var sampledata = {"1949": [{"city": "Boston", "name": "John Hancock Building", "material": "steel", "height": "150.88000488281", "location": ["42.349830627441", "-71.073310852051"], "purpose": ["telecommunications", "residential", "office"]}, {"city": "New York City", "name": "100 Park Avenue", "material": "steel", "height": "135.0299987793", "location": ["40.751361846924", "-73.97875213623"], "purpose": ["telecommunications", "residential", "office"]}, {"city": "Dallas", "name": "Rio Grande Life Building", "material": "steel", "height": "90.529998779297", "location": ["32.781330108643", "-96.801719665527"], "purpose": ["telecommunications", "residential", "office"]}, {"city": "Houston", "name": "1001 McKinney Bldg.", "material": "steel", "height": "86.870002746582", "location": ["29.756830215454", "-95.364189147949"], "purpose": ["telecommunications", "residential", "office"]}, {"city": "Cincinnati", "name": "Crown Plaza Cincinnati", "material": "steel", "height": "82.910003662109", "location": ["39.102081298828", "-84.513946533203"], "purpose": ["telecommunications", "residential", "office"]}], "1942": [{"city": "Bethesda", "name": "National Naval Medical Center", "material": "steel", "height": "80.5", "location": ["39.001838684082", "-77.094207763672"], "purpose": ["telecommunications", "residential", "office"]}], "1943": [{"city": "Dallas", "name": "Mercantile Building", "material": "steel", "height": "159.41000366211", "location": ["32.780841827393", "-96.796691894531"], "purpose": ["telecommunications", "residential", "office"]}], "1940": [{"city": "Birmingham (AL)", "name": "Jefferson Tower", "material": "steel", "height": "82.199996948242", "location": ["33.505889892578", "-86.801330566406"], "purpose": ["telecommunications", "residential", "office"]}, {"city": "New York City", "name": "10 Rockefeller Plaza", "material": "steel", "height": "69.5", "location": ["40.758331298828", "-73.979598999023"], "purpose": ["telecommunications", "residential", "office"]}]}
+
+
+
+var displayPlacesData = [];
+
+var changeYear = function(e){
+    var year = yearButton.value;
+    
+   // console.log(year);
+  //  console.log(sampledata[year]);
+    for (var i in sampledata[year]){
+	displayPlacesData.push(sampledata[year][i])
+//	console.log(sampledata[year][i]);
+    }
+    console.log(displayPlacesData);
+}
+
+//console.log(sampledata["1949"]);
+for (var i in sampledata["1949"]){
+ //   console.log(sampledata["1949"][i]["location"]);
+}
+
+yearButton.addEventListener("change", changeYear);
