@@ -147,27 +147,35 @@ var changeYear = function(e){
 yearButton.addEventListener("change", changeYear);
 
 
-var getCoord = function(e){
-   // alert(e.offsetX + ", " + e.offsetY);
-}
 
 var s = document.getElementById("slate");
 
-s.addEventListener("click", getCoord);
 
-lat = 47 * Math.PI/180;
-merc = Math.log(Math.tan((Math.PI/4)+(lat/2)));
-cy = (600/2) - (960*merc/(2*Math.PI)) + 24;
-cx = (-122 + 124)* (960/57) + 30;
+
+var getCoords = function(lat, lon){
+    var height = 600;
+    var southMostLat = 25;
+    var deltaLat = 24;
+    var offSetY = 11;
+    var cy = height - ((lat - southMostLat) * (height / deltaLat)) + offSetY;
+    var width = 960;
+    var westMostLon = -124;
+    var deltaLon = 57;
+    var offSetX = 25;
+    var cx = (lon - westMostLon) * (width / deltaLon) + offSetX;
+    var coord = [cx, cy];
+    console.log(coord);
+    return coord;
+}
+var coord = getCoords(40.7, -74);
 var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 dot.setAttribute("id", "circle");
 dot.setAttribute("fill", "blue");
-dot.setAttribute("cx", cx);
-dot.setAttribute("cy", cy);
+dot.setAttribute("cx", coord[0]);
+dot.setAttribute("cy", coord[1]);
 dot.setAttribute("r", 3);
 s.appendChild(dot);
-console.log(cx);
-console.log(cy);
+
 
 
 
