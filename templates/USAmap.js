@@ -84,13 +84,6 @@ var viewButton = document.getElementById("view");
 
 
 
-var tableHeading = document.getElementById("vHead");
-var c1 = document.getElementById("color1");
-var var1 = document.getElementById("var1");
-var var2 = document.getElementById("var2");
-var var3 = document.getElementById("var3");
-var c2 = document.getElementById("color2");
-var c3 = document.getElementById("color3");
 
 
 
@@ -99,7 +92,14 @@ var c3 = document.getElementById("color3");
 var changeView = function(e){
     //the console log codes are pseudo codes for the function
     //we need to display the various views
-   
+    
+    var tableHeading = document.getElementById("vHead");
+    var c1 = document.getElementById("color1");
+    var var1 = document.getElementById("var1");
+    var var2 = document.getElementById("var2");
+    var var3 = document.getElementById("var3");
+    var c2 = document.getElementById("color2");
+    var c3 = document.getElementById("color3");
     
     
     if (viewButton.value == "height"){
@@ -108,13 +108,15 @@ var changeView = function(e){
 	console.log("height");
 
 	tableHeading.innerHTML = "Height"
-	//we have to use css to change background colors :(
-	//	c1.setAttribute("bgcolor","blue");
-	c1.innerHTML = "RED";
+
+
+	c1.style.backgroundColor = "#990000";
 	var1.innerHTML = "> 400 m";
-	c2.innerHTML = "PURPLE";
+	
+	c2.style.backgroundColor = "#ff3300";
 	var2.innerHTML = "> 100 m";
-	c3.innerHTML = "BROWN";
+	
+	c3.style.backgroundColor = "#ff9933";
 	var3.innerHTML = "<= 100 m";
     }
     
@@ -122,13 +124,14 @@ var changeView = function(e){
 
 	console.log("materials");
 	tableHeading.innerHTML = "Materials";
-	//we have to use css to change background colors :(
-	//	c1.setAttribute("bgcolor","blue");
-	c1.innerHTML = "RED";
+
+	c1.style.backgroundColor = "#e0e0d1";
 	var1.innerHTML = "STEEL";
-	c2.innerHTML = "PURPLE";
+
+	c2.style.backgroundColor = "gray";
 	var2.innerHTML = "CONCRETE";
-	c3.innerHTML = "BROWN";
+
+	c3.style.backgroundColor = "black";
 	var3.innerHTML = "COMPOSITE";
     }
 
@@ -137,14 +140,15 @@ var changeView = function(e){
 	console.log("usage");
 	tableHeading.innerHTML = "Usage";
 	
-	//we have to use css to change background colors :(
-	//	c1.setAttribute("bgcolor","blue");
+
 	
-	c1.innerHTML = "RED";
+	c1.style.backgroundColor = "#003399";
 	var1.innerHTML = "OFFICE";
-	c2.innerHTML = "PURPLE";
+
+	c2.style.backgroundColor = "#00ffff";
 	var2.innerHTML = "RESIDENTIAL";
-	c3.innerHTML = "BROWN";
+
+	c3.style.backgroundColor = "#66ff99";
 	var3.innerHTML = "OTHER";
     }
 };
