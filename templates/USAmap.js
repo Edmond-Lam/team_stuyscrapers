@@ -71,10 +71,23 @@ var getData = function(year){
     
     return data.skyscrapers[year];
 }
+
+var getDataMulti = function(year){
+    var y = parseInt(year);
+    var items = [];
+    for(var i = 1884; i <= y; i++){
+	var str_year = "" + i;
+	var now = getData(str_year);
+	if(now != undefined){
+	    items = items.concat(now);
+	}
+    }
+    return items;
+};
 //console.log(t.thing);
 console.log(getData("1949"));
 
-
+console.log(getDataMulti("1949"));
 
 var changeView = function(e){
 
