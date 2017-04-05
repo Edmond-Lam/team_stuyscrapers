@@ -17,26 +17,7 @@ d3.json(us, function(error, us) {
     svg.append("path")
 	.attr("d", path(topojson.feature(us, us.objects.nation)));
 
-////////////////////////////////////////////////////////////////////////
-    //THIS CREATES A RANDOM CIRCLE...aka it works
-    /**
 
-    svg.append("circle")
-//	.data(places)
-//	.enter()
-
-	.attr("cy",200)
-	.attr("cx", 200)
-
-//	.attr("cy",function(d){return d[0]["location"]["latitude"];}) //latitude
-//	.attr("cx",function(d){return d[0]["location"]["longitude"];}) //longitude
-    
-	.attr("r", "50px")
-	.style("fill", "red");
-
-    ////////////////////////////////////////////////////////////////////
-
- **/
 
     d3.select("svg").selectAll("circle")
 	.data(places)
@@ -78,20 +59,12 @@ var lat = [40,29]
 
 
 var viewButton = document.getElementById("view");
-//var viewButton = d3.select("select");
-//console.log(viewButton);
-
-
-
-
-
 
 
 
 
 var changeView = function(e){
-    //the console log codes are pseudo codes for the function
-    //we need to display the various views
+
     
     var tableHeading = document.getElementById("vHead");
     var c1 = document.getElementById("color1");
@@ -100,7 +73,8 @@ var changeView = function(e){
     var var3 = document.getElementById("var3");
     var c2 = document.getElementById("color2");
     var c3 = document.getElementById("color3");
-    
+
+    console.log(viewButton.value);
     
     if (viewButton.value == "height"){
 
@@ -159,80 +133,22 @@ viewButton.addEventListener("change", changeView);
 
 
 
-console.log("latitude: "+places[0]["location"]["latitude"]);
-console.log("longitude: "+places[0]["location"]["longitude"]);
 
-//PARSE TROUGH THE DICTIONARYYYYY
+var yearButton = document.getElementById("year");
 
 
 
 
-     //var projection = d3.geo.albersUsa();
-    /**
-    svg.selectAll("circle")
-	.data(places)
-	.enter().append("circle", ".pin")
-	.attr("r", "50px")
+var changeYear = function(e){
+    console.log(yearButton.value);
 
-   // console.log(projection([d.location.longitude]));
-    /**   .attr("cx",function(d) {
-	  return "" + projection([
-          d.location.longitude])});
+}
 
-	  /**.attr("cx","500")//projection[d.location.longitude])
-          .attr("cy","500");//projection[d.location.latitude]);
+yearButton.addEventListener("change", changeYear);
 
-	  add circles to svg
-
-    svg.selectAll("circle")
-	.data(places).enter()
-	.append("circle")
-	.attr("cx", "200");
-	.attr("cy", "200");
-	.attr("r", "100px")
-	.attr("fill", "red")
-    
-  
-
-
-
-    circles.selectAll("div")
-	.data(lat)
-	.enter()
-	.append("circle")
-	.attr("cy", function(d){return d+"px";}) //latitude
-	.attr("r",30);
-
-    
-    circles.selectAll("div")
-	.data(longi)
-	.enter()
-	.append("circle")
-	.attr("cx", function(d){return d+"px";}) //longitude
-	.attr("r",30);
-    
-	});
-
-
-    svg.selectAll("circle")
-	.data([aa,bb]).enter()
-	.append("circle")
-	.attr("cx",100)
-	      //function (d) { console.log(projection(d)); return projection(d)[0]; })
-	.attr("cy",100)
-	      //function (d) { return projection(d)[1]; })
-	.attr("r", "50px")
-	.attr("fill", "red")
-
-    aa = [-122.490402, 37.786453];
-    bb = [-122.389809, 37.72728];
-
-    
-});
-**/
 
 var getCoord = function(e){
-    alert(e.offsetX + ", " + e.offsetY);
+   // alert(e.offsetX + ", " + e.offsetY);
 }
 
 var s = document.getElementById("slate");
