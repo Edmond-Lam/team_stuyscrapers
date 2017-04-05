@@ -4,14 +4,31 @@ Team Stuyscraper's Devlog
 
 ==========
 
-Edmond Lam - 4/1/17 3:21 PM
+Issac Kim - 3/29/17 9:35 PM
 
-Devlog created. Slider test almost completed, can display date when slider is changed in addition to the handle. Starting on CSS.
+Start working on hover feature to display info.
+
+
+Issac Kim - 3/29/17 4:26 PM
+
+Continue on hover. Creates box at the location of the dot that mouse hover over.
+Does not display any information yet.
+
+
+Issac Kim - 3/30/17 2:20 PM
+
+Finish hover so that it displays specified information of the dot that is hovered over. 
 
 
 Maddie Ostergaard - 3/31/17 2:31 PM
 
 Created parser.py and app.py. Started parser functions
+
+
+Edmond Lam - 4/1/17 3:21 PM
+
+Devlog created. Slider test almost completed, can display date when slider is changed in addition to the handle. Starting on CSS.
+
 
 Constantine Athanitis - 4/3/17 2:10 AM
 
@@ -23,14 +40,36 @@ Constantine Athanitis - 4/3/17 2:45 PM and 5:00 PM
 Successfully created and displayed a map of the US. Also created the dropdown menu for the different views. Started working with code to display points.
 
 
+Issac Kim - 4/3/17 2:30 PM
+
+Work on Parser.py to simplify info received from the csv file.
+
+
 Maddie Ostergaard - 4/4/17 2:45 PM
 
 Parser.py and app.py completed.
+
+
+Issac Kim - 4/3/17 4:50 PM
+
+Edit parser.py to format simplified data into json.
+
+
+Issac Kim - 4/4/17 4:40 PM
+
+Work on converting latitude and longitude coordinates to points on svg
+
 
 Constantine Athanitis - 4/4/17 2:45 PM and 5:00 PM
 
 Completed code that allows random sample points/circles to be displayed on the map
 
+
 Constantine Athanitis - 4/4/17 10:57 PM
 
 Finished creating a basic legend that changes output indicators as user changed the map view.
+
+
+Issac Kim - 4/5/17 12:32 AM
+
+Finish function to convert lat and long to x and y.
