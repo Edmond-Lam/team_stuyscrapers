@@ -70,6 +70,11 @@ Constantine Athanitis - 4/4/17 10:57 PM
 Finished creating a basic legend that changes output indicators as user changed the map view.
 
 
+Constantine Athanitis - 4/5/17 12:23 AM
+
+Finished fully-functional color legend
+
+
 Issac Kim - 4/5/17 12:32 AM
 
 Finish function to convert lat and long to x and y.
