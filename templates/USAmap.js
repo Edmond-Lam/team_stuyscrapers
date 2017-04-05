@@ -198,3 +198,28 @@ console.log("longitude: "+places[0]["location"]["longitude"]);
     
 });
 **/
+
+var getCoord = function(e){
+    alert(e.offsetX + ", " + e.offsetY);
+}
+
+var s = document.getElementById("slate");
+
+s.addEventListener("click", getCoord);
+
+lat = 47 * Math.PI/180;
+merc = Math.log(Math.tan((Math.PI/4)+(lat/2)));
+cy = (600/2) - (960*merc/(2*Math.PI)) + 24;
+cx = (-122 + 124)* (960/57) + 30;
+var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+dot.setAttribute("id", "circle");
+dot.setAttribute("fill", "blue");
+dot.setAttribute("cx", cx);
+dot.setAttribute("cy", cy);
+dot.setAttribute("r", 3);
+s.appendChild(dot);
+console.log(cx);
+console.log(cy);
+
+
+
