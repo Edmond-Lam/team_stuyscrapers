@@ -36,17 +36,7 @@ d3.json(us, function(error, us) {
 
     ////////////////////////////////////////////////////////////////////
 
-    d3.select("svg").selectAll("circle")
-    	.data(longi)
-    	.enter()
-	.append("circle")
-
-    //longitude
-    	.attr("cx",function(d){return d;})
-    
-    
-	.attr("r", "50px")
-	.style("fill", "red");**/
+ **/
 
     d3.select("svg").selectAll("circle")
 	.data(places)
@@ -61,19 +51,26 @@ d3.json(us, function(error, us) {
 	.attr("r", "50px")
 	.style("fill", "red");
     
-
-    //idk why the cy isn't being added
-    d3.select("svg").selectAll("circle")
-    	.data(lat)
-    	.enter()
-	.append("circle")    
-    	.attr("cy",function(d){return d;}) //latitude
- 
-   // console.log(places[0]["location"]["latitude"]);
-    //console.log(places[0]["location"]["longitude"]);
 });
 
+//trying to plot points
 
+var places = [
+  {
+    name: "New York City",
+    location: {
+      latitude: 40.7128,//y
+      longitude: 74.0059//x
+    }
+  },
+  {
+    name: "Houston",
+    location: {
+      latitude: 29.7604,
+      longitude: 95.3698
+    }
+  }
+]
 
 var longi = [74,95]
 var lat = [40,29]
@@ -86,21 +83,69 @@ var viewButton = document.getElementById("view");
 
 
 
+
+var tableHeading = document.getElementById("vHead");
+var c1 = document.getElementById("color1");
+var var1 = document.getElementById("var1");
+var var2 = document.getElementById("var2");
+var var3 = document.getElementById("var3");
+var c2 = document.getElementById("color2");
+var c3 = document.getElementById("color3");
+
+
+
+
+
 var changeView = function(e){
     //the console log codes are pseudo codes for the function
     //we need to display the various views
-
+   
+    
     
     if (viewButton.value == "height"){
-	console.log("height"); 
+
+	
+	console.log("height");
+
+	tableHeading.innerHTML = "Height"
+	//we have to use css to change background colors :(
+	//	c1.setAttribute("bgcolor","blue");
+	c1.innerHTML = "RED";
+	var1.innerHTML = "> 400 m";
+	c2.innerHTML = "PURPLE";
+	var2.innerHTML = "> 100 m";
+	c3.innerHTML = "BROWN";
+	var3.innerHTML = "<= 100 m";
     }
     
     else if (viewButton.value == "materials"){
+
 	console.log("materials");
+	tableHeading.innerHTML = "Materials";
+	//we have to use css to change background colors :(
+	//	c1.setAttribute("bgcolor","blue");
+	c1.innerHTML = "RED";
+	var1.innerHTML = "STEEL";
+	c2.innerHTML = "PURPLE";
+	var2.innerHTML = "CONCRETE";
+	c3.innerHTML = "BROWN";
+	var3.innerHTML = "COMPOSITE";
     }
 
     else if (viewButton.value == "usage"){
+	
 	console.log("usage");
+	tableHeading.innerHTML = "Usage";
+	
+	//we have to use css to change background colors :(
+	//	c1.setAttribute("bgcolor","blue");
+	
+	c1.innerHTML = "RED";
+	var1.innerHTML = "OFFICE";
+	c2.innerHTML = "PURPLE";
+	var2.innerHTML = "RESIDENTIAL";
+	c3.innerHTML = "BROWN";
+	var3.innerHTML = "OTHER";
     }
 };
 
@@ -108,24 +153,7 @@ var changeView = function(e){
 viewButton.addEventListener("change", changeView);
 
 
-//trying to plot points
 
-var places = [
-  {
-    name: "New York City",
-    location: {
-      latitude: 40.7128,//y
-      longitude: -74.0059//x
-    }
-  },
-  {
-    name: "Houston",
-    location: {
-      latitude: 29.7604,
-      longitude: -95.3698
-    }
-  }
-]
 
 console.log("latitude: "+places[0]["location"]["latitude"]);
 console.log("longitude: "+places[0]["location"]["longitude"]);

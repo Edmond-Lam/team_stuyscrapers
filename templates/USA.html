@@ -2,6 +2,20 @@
 <html>
   <head>
     <h1>Skyscrapers in the United States</h1>
+
+    <style>
+      table {
+      border-collapse: separate;
+      width: 100%;
+      border: 1px solid black;
+      table-layout: fixed;
+      } 
+
+      td,th {
+      border: 1px solid black;
+      }
+
+    </style>
   </head>
 
 
@@ -10,10 +24,34 @@
       <option value="height">Height View</option>
       <option value="materials">Materials View</option>
       <option value="usage">Usage View</option>
-    
-
-
     </select>
+
+
+    
+    <table id="table" style="width:100%">
+      <tr>
+	<th>Color</th>
+	<th id="vHead">Height</th>
+      </tr>
+      <tr>
+	<td id="color1">RED</td>
+	<td id="var1">> 400 m</td>
+
+      </tr>
+      <tr>
+	<td id="color2">PURPLE</td>
+	<td id="var2">> 100 m</td>
+
+      </tr>
+      <tr>
+	<td id="color3">BROWN</td>
+	<td id="var3"><= 100 m</td>
+
+			 </tr>
+    </table>
+    
+    
+	
     <br>
     
 
