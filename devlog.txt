@@ -82,3 +82,8 @@ Finish function to convert lat and long to x and y.
 Constantine Athanitis - 4/5/17 2:55 AM
 
 Finished creating another dropdown menu for different year options (as a replacement for the slider). Finished inputting sample data set and year parsing function.
+
+
+Constantine Athanitis - 4/5/17 4:33 AM
+
+Final attempt at everything. Was able to use Issac's parser code to plot the points...but the projection scaling is still off. Also, I implemented the height coloring. I added more input options in the year dropdown menu. Also enhanced the changeYear function. NOTE: This is the best I could come up with given having to start from scratch within six hours. Some team members were more helpful than others...
