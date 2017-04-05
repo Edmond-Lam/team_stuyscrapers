@@ -78,3 +78,7 @@ Finished fully-functional color legend
 Issac Kim - 4/5/17 12:32 AM
 
 Finish function to convert lat and long to x and y.
+
+Constantine Athanitis - 4/5/17 2:55 AM
+
+Finished creating another dropdown menu for different year options (as a replacement for the slider). Finished inputting sample data set and year parsing function.
