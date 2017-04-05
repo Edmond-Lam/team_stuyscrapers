@@ -30,3 +30,7 @@ Parser.py and app.py completed.
 Constantine Athanitis - 4/4/17 2:45 PM and 5:00 PM
 
 Completed code that allows random sample points/circles to be displayed on the map
+
+Constantine Athanitis - 4/4/17 10:57 PM
+
+Finished creating a basic legend that changes output indicators as user changed the map view.
