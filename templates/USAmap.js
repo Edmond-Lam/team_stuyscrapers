@@ -81,12 +81,15 @@ var viewButton = document.getElementById("view");
 //var viewButton = d3.select("select");
 //console.log(viewButton);
 
+// for reading in json data
 
 
-
-
-
-
+var getData = function(year){
+    
+    return data.skyscrapers[year];
+}
+//console.log(t.thing);
+console.log(getData("1949"));
 
 
 var changeView = function(e){
@@ -166,13 +169,13 @@ console.log("longitude: "+places[0]["location"]["longitude"]);
 
 
 
-
+/*
      //var projection = d3.geo.albersUsa();
-    /**
+    
     svg.selectAll("circle")
 	.data(places)
 	.enter().append("circle", ".pin")
-	.attr("r", "50px")
+	.attr("r", "3px")
 
    // console.log(projection([d.location.longitude]));
     /**   .attr("cx",function(d) {
@@ -185,17 +188,17 @@ console.log("longitude: "+places[0]["location"]["longitude"]);
 	  add circles to svg
 
     svg.selectAll("circle")
-	.data(places).enter()
-	.append("circle")
-	.attr("cx", "200");
-	.attr("cy", "200");
-	.attr("r", "100px")
+    .data(places).enter()
+    .append("circle")
+    .attr("cx", "200")
+    .attr("cy", "200")
+    .attr("r", "100px")
 	.attr("fill", "red")
     
-  
+  */
 
 
-
+/*
     circles.selectAll("div")
 	.data(lat)
 	.enter()
@@ -229,7 +232,7 @@ console.log("longitude: "+places[0]["location"]["longitude"]);
 
     
 });
-**/
+*/
 
 
 var s = document.getElementById("slate");
@@ -251,14 +254,16 @@ var getCoords = function(lat, lon){
     console.log(coord);
     return coord;
 }
-var coord = getCoords(40.7, -74);
+
+
+/*var coord = getCoords(40.7, -74);
 var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 dot.setAttribute("id", "circle");
 dot.setAttribute("fill", "blue");
 dot.setAttribute("cx", coord[0]);
 dot.setAttribute("cy", coord[1]);
 dot.setAttribute("r", 3);
-s.appendChild(dot);
+s.appendChild(dot);*/
 
 
 
