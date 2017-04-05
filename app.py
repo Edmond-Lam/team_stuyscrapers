@@ -4,11 +4,11 @@ import json
 
 app = Flask(__name__)
 
-@app.route("/"):
+@app.route("/")
 def homepage():
     return render_template('home.html')
 
-@app.route('/map/'):
+@app.route('/map/')
 def map():
     return render_template('map.html')
 
